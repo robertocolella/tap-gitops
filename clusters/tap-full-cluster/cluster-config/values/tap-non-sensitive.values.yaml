@@ -4,9 +4,9 @@ shared:
 
   image_registry:
     project_path: harbor.dorn.tkg-azure-lab.robertocolella.com/tap
-    secret:
-      name: "KP-DEFAULT-REPO-SECRET"
-      namespace: "KP-DEFAULT-REPO-SECRET-NAMESPACE"
+    # secret:
+    #   name: "KP-DEFAULT-REPO-SECRET"
+    #   namespace: "KP-DEFAULT-REPO-SECRET-NAMESPACE"
 
   # kubernetes_distribution: "K8S-DISTRO" # Only required if the distribution is OpenShift and must be used with the following kubernetes_version key.
 
