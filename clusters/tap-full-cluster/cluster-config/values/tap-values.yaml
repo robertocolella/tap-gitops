@@ -1,58 +1,58 @@
-shared:
-  ingress_domain: tap.robertocolella.com
-  ingress_issuer: # Optional, can denote a cert-manager.io/v1/ClusterIssuer of your choice. Defaults to "tap-ingress-selfsigned".
-
-  image_registry:
-    project_path: harbor.dorn.tkg-azure-lab.robertocolella.com/tap
-ceip_policy_disclosed: true # Installation fails if this is not set to true. Not a string.
-profile: full # Can take iterate, build, run, view.
-supply_chain: basic # Can take testing, testing_scanning.
-ootb_supply_chain_basic:
-  registry:
-    server: harbor.dorn.tkg-azure-lab.robertocolella.com
-    repository: tap/supplychain
-  gitops:
-    ssh_secret: ""
-ootb_supply_chain_testing:
-  registry:
-    server: harbor.dorn.tkg-azure-lab.robertocolella.com
-    repository: tap/supplychain
-  gitops:
-    ssh_secret: ""
-ootb_supply_chain_testing_scanning:
-  registry:
-    server: harbor.dorn.tkg-azure-lab.robertocolella.com
-    repository: tap/supplychain
-  gitops:
-    ssh_secret: ""
-contour:
-  envoy:
-    service:
-      type: LoadBalancer # This is set by default, but can be overridden by setting a different value.
-buildservice:
-  kp_default_repository: harbor.dorn.tkg-azure-lab.robertocolella.com/tap/build-service
-  kp_default_repository_username: admin
-tap_gui:
-  service_type: ClusterIP # If the shared.ingress_domain is set as earlier, this must be set to ClusterIP.
-  metadataStoreAutoconfiguration: true # Create a service account, the Kubernetes control plane token and the requisite app_config block to enable communications between Tanzu Application Platform GUI and SCST - Store.
-  ingressEnabled: "true" # --> ADDED
-  app_config:
-    catalog:
-      locations:
-        - type: url
-          target: https://GIT-CATALOG-URL/catalog-info.yaml
-cnrs:
-  domain_template: '{{.Name}}-{{.Namespace}}.{{.Domain}}'
-metadata_store:
-  ns_for_export_app_cert: '*'
-  app_service_type: ClusterIP
-scanning:
-  metadataStore:
-    url: "" # Configuration is moved, so set this string to empty.
-grype:
-  namespace: my-apps
-  targetImagePullSecret: tap-registry
-policy:
-  tuf_enabled: false # By default, TUF initialization and keyless verification are deactivated.
-tap_telemetry:
-  installed_for_vmware_internal_use: "true"
+tap_install:
+  values:
+    shared:
+      ingress_domain: tap.robertocolella.com
+      image_registry:
+        project_path: harbor.dorn.tkg-azure-lab.robertocolella.com/tap
+    ceip_policy_disclosed: true
+    profile: full
+    supply_chain: basic
+    ootb_supply_chain_basic:
+      registry:
+        server: harbor.dorn.tkg-azure-lab.robertocolella.com
+        repository: tap/supplychain
+      gitops:
+        ssh_secret: ""
+    ootb_supply_chain_testing:
+      registry:
+        server: harbor.dorn.tkg-azure-lab.robertocolella.com
+        repository: tap/supplychain
+      gitops:
+        ssh_secret: ""
+    ootb_supply_chain_testing_scanning:
+      registry:
+        server: harbor.dorn.tkg-azure-lab.robertocolella.com
+        repository: tap/supplychain
+      gitops:
+        ssh_secret: ""
+    contour:
+      envoy:
+        service:
+          type: LoadBalancer
+    buildservice:
+      kp_default_repository: harbor.dorn.tkg-azure-lab.robertocolella.com/tap/build-service
+      kp_default_repository_username: admin
+    tap_gui:
+      service_type: ClusterIP
+      metadataStoreAutoconfiguration: true
+      ingressEnabled: "true"
+      app_config:
+        catalog:
+          locations:
+          - type: url
+            target: https://github.com/MoSehsah/bank-demo/blob/main/catalog/catalog-info.yaml
+    cnrs:
+      domain_template: '{{.Name}}-{{.Namespace}}.{{.Domain}}'
+    metadata_store:
+      ns_for_export_app_cert: '*'
+      app_service_type: ClusterIP
+    scanning:
+      metadataStore:
+        url: ""
+    grype:
+      namespace: my-apps
+      targetImagePullSecret: tap-registry
+    policy:
+      tuf_enabled: false
+    tap_telemetry:
+      installed_for_vmware_internal_use: "true"
