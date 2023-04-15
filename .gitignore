@@ -29,3 +29,4 @@ Temporary Items
 tap-non-sensitive.values-reference.yaml
 tmp-enc
 templates
+gke-cluster-command.sh
