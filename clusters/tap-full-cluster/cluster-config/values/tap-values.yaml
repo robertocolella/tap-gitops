@@ -85,3 +85,10 @@ tap_install:
 
     appliveview_connector:
       activateSensitiveOperations: true  
+    
+    namespace_provisioner:
+      controller: false
+      gitops_install:
+        ref: origin/main
+        subPath: ns-provisioner-samples/gitops-install
+        url: https://github.com/robertocolella/application-accelerator-samples.git    
