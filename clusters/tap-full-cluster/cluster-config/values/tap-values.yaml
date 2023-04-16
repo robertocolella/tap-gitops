@@ -38,7 +38,7 @@ tap_install:
       ingressEnabled: "true"
       app_config:
         customize:
-          # custom_logo:
+          custom_logo:
           custom_name: 'Roberto Colella - Tanzu Application Platform'
         app:
           title: 'Roberto Colella - Developer Portal'
