@@ -99,7 +99,7 @@ tap_install:
           #   namespace: tap-install
           #   create_export: true
         path: _ytt_lib/testing-scanning-supplychain-setup
-      # gitops_install:
-      #   ref: origin/main
-      #   subPath: ns-provisioner-samples/gitops-install
-      #   url: https://github.com/robertocolella/application-accelerator-samples.git
+      gitops_install:
+        ref: origin/main
+        subPath: ns-provisioner-samples/gitops-install
+        url: https://github.com/robertocolella/application-accelerator-samples.git
