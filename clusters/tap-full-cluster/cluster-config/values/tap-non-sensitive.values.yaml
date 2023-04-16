@@ -6,7 +6,7 @@ tap_install:
         project_path: harbor.dorn.tkg-azure-lab.robertocolella.com/tap
     ceip_policy_disclosed: true
     profile: full
-    supply_chain: basic
+    supply_chain: testing_scanning
     ootb_supply_chain_basic:
       registry:
         server: harbor.dorn.tkg-azure-lab.robertocolella.com
