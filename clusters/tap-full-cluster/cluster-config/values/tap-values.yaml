@@ -56,3 +56,6 @@ tap_install:
       tuf_enabled: false
     tap_telemetry:
       installed_for_vmware_internal_use: "true"
+
+    appliveview_connector:
+      activateSensitiveOperations: true  
