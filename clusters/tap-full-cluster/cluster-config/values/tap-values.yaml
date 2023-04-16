@@ -76,7 +76,7 @@ tap_install:
       metadataStore:
         url: ""
     grype:
-      namespace: my-apps
+      namespace: "default"
       # targetImagePullSecret: tap-registry
     policy:
       tuf_enabled: false
