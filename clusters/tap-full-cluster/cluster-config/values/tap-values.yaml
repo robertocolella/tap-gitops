@@ -40,6 +40,29 @@ tap_install:
         customize:
           # custom_logo:
           custom_name: 'Roberto Colella - Tanzu Application Platform'
+        app:
+          title: 'Roberto Colella - Developer Portal'
+          support:
+            url: https://tanzu.vmware.com/support
+            items:
+              - title: Contact Support
+                icon: email
+                links:
+                - url: https://tanzu.vmware.com/support
+                  title: Tanzu Support Page
+              - title: Documentation
+                icon: docs
+                links:
+                - url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/index.html
+                  title: Tanzu Application Platform Documentation
+        integrations:
+          github:
+          - host: github.com
+        # techdocs:
+        #   generator:
+        #     dockerImage: spotify/techdocs:v1.1.2
+        #     pullImage: false
+        #     runIn: "docker"        
         catalog:
           locations:
           - type: url
