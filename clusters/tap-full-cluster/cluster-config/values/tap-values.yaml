@@ -103,8 +103,8 @@ tap_install:
       - git:
           ref: origin/main
           # subPath: ns-provisioner-samples/testing-scanning-supplychain-polyglot
-          subPath: ns-provisioner-samples/testing-scanning-supplychain-polyglot-lax
-          # subPath: ns-provisioner-samples/testing-scanning-supplychain-auto-detect
+          # subPath: ns-provisioner-samples/testing-scanning-supplychain-polyglot-lax
+          subPath: ns-provisioner-samples/testing-scanning-supplychain-auto-detect
           url: https://github.com/robertocolella/application-accelerator-samples.git
           # secretRef section is only needed if connecting to a Private Git repo
           # secretRef:
