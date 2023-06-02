@@ -3,25 +3,25 @@ tap_install:
     shared:
       ingress_domain: tap.robertocolella.com
       image_registry:
-        project_path: colellar-azurecr.io/tap
+        project_path: colellar.azurecr.io/tap
     ceip_policy_disclosed: true
     profile: full
     supply_chain: testing_scanning
     ootb_supply_chain_basic:
       registry:
-        server: colellar-azurecr.io
+        server: colellar.azurecr.io
         repository: tap/supplychain
       gitops:
         ssh_secret: ""
     ootb_supply_chain_testing:
       registry:
-        server: colellar-azurecr.io
+        server: colellar.azurecr.io
         repository: tap/supplychain
       gitops:
         ssh_secret: ""
     ootb_supply_chain_testing_scanning:
       registry:
-        server: colellar-azurecr.io
+        server: colellar.azurecr.io
         repository: tap/supplychain
       gitops:
         ssh_secret: ""
@@ -30,7 +30,7 @@ tap_install:
         service:
           type: LoadBalancer
     buildservice:
-      kp_default_repository: colellar-azurecr.io/tap/build-service
+      kp_default_repository: colellar.azurecr.io/tap/build-service
       kp_default_repository_username: admin
     tap_gui:
       service_type: ClusterIP
