@@ -33,6 +33,12 @@ tap_install:
       kp_default_repository: colellar.azurecr.io/tap/build-service
       kp_default_repository_username: colellar
       exclude_dependencies: true
+    
+    gitops:
+      server_address: https://github.com/
+      repository_owner: robertocolella
+      repository_name: tap-gitops-config
+    
     tap_gui:
       service_type: ClusterIP
       metadataStoreAutoconfiguration: true
