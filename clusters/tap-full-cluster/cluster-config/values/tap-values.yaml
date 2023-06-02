@@ -31,7 +31,7 @@ tap_install:
           type: LoadBalancer
     buildservice:
       kp_default_repository: colellar.azurecr.io/tap/build-service
-      kp_default_repository_username: admin
+      kp_default_repository_username: colellar
     tap_gui:
       service_type: ClusterIP
       metadataStoreAutoconfiguration: true
