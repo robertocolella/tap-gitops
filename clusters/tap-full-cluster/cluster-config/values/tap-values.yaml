@@ -28,6 +28,8 @@ tap_install:
         server_address: https://github.com/
         repository_owner: robertocolella
         repository_name: tap-gitops-config
+        branch: prod
+        ssh_secret: git-secret
         pull_request:
           server_kind: github
           commit_branch: ""
