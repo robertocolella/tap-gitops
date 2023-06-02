@@ -29,7 +29,7 @@ tap_install:
         repository_owner: robertocolella
         repository_name: tap-gitops-config
         branch: prod
-        ssh_secret: git-secret
+        # ssh_secret: git-secret
         commit_strategy: pull_request
         pull_request:
           server_kind: github
