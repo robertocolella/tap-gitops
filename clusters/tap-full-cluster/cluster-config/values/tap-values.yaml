@@ -97,6 +97,7 @@ tap_install:
     grype:
       namespace: "default"
       # targetImagePullSecret: tap-registry
+      targetImagePullSecret: registries-credentials
     policy:
       tuf_enabled: false
     tap_telemetry:
