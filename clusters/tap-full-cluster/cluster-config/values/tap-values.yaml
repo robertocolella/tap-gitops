@@ -116,7 +116,7 @@ tap_install:
     #     path: _ytt_lib/testing-scanning-supplychain-setup
 
     namespace_provisioner:
-      controller: false
+      # controller: false
       additional_sources:
       - git:
           ref: origin/main
