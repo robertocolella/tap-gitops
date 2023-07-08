@@ -81,7 +81,8 @@ tap_install:
     grype:
       namespace: "default"
       # targetImagePullSecret: tap-registry
-      targetImagePullSecret: registries-credentials
+      targetImagePullSecret: scanner-secret-ref
+      # targetImagePullSecret: registries-credentials
     policy:
       tuf_enabled: false
     tap_telemetry:
@@ -101,6 +102,10 @@ tap_install:
 
     namespace_provisioner:
       controller: false
+      gitops_install:
+        ref: origin/main
+        subPath: namespace-provisioner
+        url: https://github.com/robertocolella/tap-gitops.git
       additional_sources:
       - git:
           ref: origin/main
@@ -114,7 +119,3 @@ tap_install:
           #   namespace: tap-install
           #   create_export: true
         path: _ytt_lib/testing-scanning-supplychain-polyglot-lax-setup
-      gitops_install:
-        ref: origin/main
-        subPath: namespace-provisioner
-        url: https://github.com/robertocolella/tap-gitops.git
