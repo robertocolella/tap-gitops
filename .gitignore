@@ -32,3 +32,4 @@ templates
 gke-cluster-command.sh
 
 my-scripts
+clusters/tap-full-cluster/cluster-config/values/tap-values-bkp.yaml
