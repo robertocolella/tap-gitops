@@ -6,8 +6,10 @@ tap_install:
       ingress_issuer: letsencrypt-contour-cluster-issuer
       image_registry:
         project_path: colellar.azurecr.io/tap
+    
     ceip_policy_disclosed: true
     profile: full
+
     supply_chain: basic #testing_scanning 
     ootb_supply_chain_basic:
       registry:
@@ -51,7 +53,7 @@ tap_install:
     buildservice:
       kp_default_repository: colellar.azurecr.io/tap/build-service
       kp_default_repository_username: colellar
-      exclude_dependencies: true
+      # exclude_dependencies: true
  
     tap_gui:
       service_type: ClusterIP
@@ -105,6 +107,9 @@ tap_install:
     policy:
       tuf_enabled: false
 
+    springboot_conventions:
+      autoConfigureActuators: true
+    
     tap_telemetry:
       installed_for_vmware_internal_use: "true"
 
