@@ -97,8 +97,8 @@ tap_install:
       ns_for_export_app_cert: '*'
       app_service_type: ClusterIP
     scanning:
-      metadataStore:
-        # url: ""
+      # metadataStore:
+      #   url: ""
     grype:
       namespace: "default"
       targetImagePullSecret: scanner-secret-ref
