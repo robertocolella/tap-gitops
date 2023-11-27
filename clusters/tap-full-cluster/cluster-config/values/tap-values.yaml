@@ -103,7 +103,8 @@ tap_install:
       #   url: ""
     grype:
       namespace: "default"
-      targetImagePullSecret: scanner-secret-ref
+      # targetImagePullSecret: scanner-secret-ref
+      targetImagePullSecret: registries-credentials
     policy:
       tuf_enabled: false
 
