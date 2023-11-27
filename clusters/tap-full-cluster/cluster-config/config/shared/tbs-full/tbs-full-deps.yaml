@@ -9,7 +9,7 @@ metadata:
 spec:
   fetch:
     imgpkgBundle:
-      image: registry.tanzu.vmware.com/tanzu-application-platform/full-deps-package-repo
+      image: registry.tanzu.vmware.com/tanzu-application-platform/full-deps-package-repo:1.7.1
 ---
 apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
