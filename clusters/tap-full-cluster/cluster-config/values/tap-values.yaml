@@ -65,7 +65,7 @@ tap_install:
           environment: development
           # session:
           #   secret: #CUSTOM SESSION SECRET
-          allowGuestAccess: true
+          # allowGuestAccess: true
         organization:
           name: 'Customer Platform Team'    
         customize:

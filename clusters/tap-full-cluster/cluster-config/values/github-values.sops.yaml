@@ -3,7 +3,6 @@ tap_install:
         tap_gui:
             app_config:
                 auth:
-                    allowGuestAccess: ENC[AES256_GCM,data:Qma9oQ==,iv:XWOd5eAw59soF/qDKkf4m4lCz3Tsh7VhmJq5QCymyCA=,tag:JtcI10BG5u6+EeBNCZvJdQ==,type:bool]
                     environment: ENC[AES256_GCM,data:CJnRzNi6qJMk0u4=,iv:8AooLH2675S53pmr6znRlN0QkcvdAgs5NGRdA8gsrP8=,tag:zIPrjC2bc+gW3risDaLBaw==,type:str]
                     providers:
                         github:
@@ -25,8 +24,8 @@ sops:
             RGl5ZVgzSU8zRXo2UWZzMS81NXViR1kKv8sa1zayPgczJ3vaDuOlLlQsO6pUYzBY
             sxsq2vaWvwrz+fYu+5gQV6sMeFwLDBFylX0TwcUJh9N0/EF9Kt8CGQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-15T14:56:44Z"
-    mac: ENC[AES256_GCM,data:oGFupgCAwoWZpEQH/Ic33umtl22ZudKvhldwUiRhIEAIKhBP3lxqGgrL4C8OJ+2pBjY/0M/s7JHpa2pzcDrl8xhhu2vpS9R5uyLP1U+2yMbhXlUFuT8fCKJ239hoI7kj1xAdW4lh5uEpjncJhp6On7dTrDYfvj5m9Qy2K8SvpYg=,iv:HC1YTQRsc5U5IDVGdCbnZclEOAKMaSEzZKJVs7m1law=,tag:Sm/0sod2joV6LGt88Cz+/A==,type:str]
+    lastmodified: "2023-11-27T14:30:41Z"
+    mac: ENC[AES256_GCM,data:plq4U7VRYt/2iCIDe5z+aI620vlT8kLYgaVzX93ZLdxm/PJIUuxnXgi+xovCsxRwTDJ2US2K+eydYQFhuhUzHvZfNhuw31mSJnTldvO/FUBZgyMolemBS6Cyh31k2v0cz/vcXAquTijRlYt1lB2r337paw8myc7OAmG57l1gGqk=,iv:s/pCedChs6O4m4eGi2QPhOU7vbT1FMTw+ZmpZMx1XkQ=,tag:rNzntlrwaNh38wMmLJ3j7g==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.8.0
