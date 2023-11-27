@@ -98,7 +98,7 @@ tap_install:
       app_service_type: ClusterIP
     scanning:
       metadataStore:
-        url: ""
+        # url: ""
     grype:
       namespace: "default"
       targetImagePullSecret: scanner-secret-ref
