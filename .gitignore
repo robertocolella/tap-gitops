@@ -1,2 +1,13 @@
 .DS_Store
 .vscode/settings.json
+tmp-enc/key.txt
+tap-non-sensitive.values-reference.yaml
+tmp-enc
+templates
+gke-cluster-command.sh
+
+my-scripts
+clusters/tap-full-cluster/tanzu-sync/app/sensitive-values/github-values.yaml
+github-values.yaml
+git-credentials.yaml
+git-credentials-2.yaml
