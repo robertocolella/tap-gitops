@@ -3,8 +3,7 @@ tap_install:
     shared:
       # ingressEnabled: true
       ingress_domain: tap.robertocolella.com
-      # ingress_issuer: letsencrypt-contour-cluster-issuer
-      ingress_issuer: ""
+      ingress_issuer: letsencrypt-contour-cluster-issuer
       image_registry:
         project_path: colellar.azurecr.io/tap
     
