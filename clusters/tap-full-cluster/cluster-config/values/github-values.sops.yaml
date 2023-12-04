@@ -3,12 +3,11 @@ tap_install:
         tap_gui:
             app_config:
                 auth:
-                    environment: ENC[AES256_GCM,data:CJnRzNi6qJMk0u4=,iv:8AooLH2675S53pmr6znRlN0QkcvdAgs5NGRdA8gsrP8=,tag:zIPrjC2bc+gW3risDaLBaw==,type:str]
                     providers:
                         github:
                             development:
                                 clientId: ENC[AES256_GCM,data:l66YBvjJLBnk0kfLwD8nFBR/vMs=,iv:6rcNNnokwbEPqkG+Avv16kqJXG5M1WNdb58MOuSA3Bs=,tag:IhyFbKPiKIs8n2MkyZMC0A==,type:str]
-                                clientSecret: ENC[AES256_GCM,data:t9PslTD//3XC+/xsqJQeexlC5J1TLM2sB0s9VZ0D6+chWOy/7OAgbg==,iv:u2B3/J5PNQXZO7v4bnAyiv9tD7skxE6lp++UWf1lSzs=,tag:e2wJ2X/0RbFnBdZS3I+SkA==,type:str]
+                                clientSecret: ENC[AES256_GCM,data:ZupWDNYO4VMkhu+qCDwKl8vJa+SQtGPw0l3kKP8Iv9hFzHSRuGFEDw==,iv:RifPKOeZ8hZoCgJfbuxW+Em5jZlzxgunXo7wOoeJOek=,tag:Kb4RZLpQO11BTKtiChy0Eg==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -24,8 +23,8 @@ sops:
             RGl5ZVgzSU8zRXo2UWZzMS81NXViR1kKv8sa1zayPgczJ3vaDuOlLlQsO6pUYzBY
             sxsq2vaWvwrz+fYu+5gQV6sMeFwLDBFylX0TwcUJh9N0/EF9Kt8CGQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-11-27T14:30:41Z"
-    mac: ENC[AES256_GCM,data:plq4U7VRYt/2iCIDe5z+aI620vlT8kLYgaVzX93ZLdxm/PJIUuxnXgi+xovCsxRwTDJ2US2K+eydYQFhuhUzHvZfNhuw31mSJnTldvO/FUBZgyMolemBS6Cyh31k2v0cz/vcXAquTijRlYt1lB2r337paw8myc7OAmG57l1gGqk=,iv:s/pCedChs6O4m4eGi2QPhOU7vbT1FMTw+ZmpZMx1XkQ=,tag:rNzntlrwaNh38wMmLJ3j7g==,type:str]
+    lastmodified: "2023-12-04T16:42:09Z"
+    mac: ENC[AES256_GCM,data:KvB4m2NhDWBme7V5eNmv58sbOcH9Cd6dzHEoUTBbS/YWR/g9fxvvQfLS7LFGlET7wquPLcPHj8AsphNFhRQ6lqADSNOmfxsd0hrEGUFYuYqi96LZ1T+BqY3V8FlBfooYmv03E9SAAB49u0tNoQpOfKKZUD8SuGkEF5aSIg+fgwA=,iv:a9HDapB8TwW9upta4KKkVFIcsuY7vfVaAiMdKjuEeM0=,tag:++upbjRDol9l5wdcQ6ErWQ==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.8.0
