@@ -63,7 +63,7 @@ tap_install:
       ingressEnabled: "true"
       app_config:
         app: 
-          baseUrl: https://tap-gui.tap.robertocolella.com
+          baseUrl: http://tap-gui.tap.robertocolella.com
         integrations:
           github:
             - host: github.com
@@ -73,9 +73,9 @@ tap_install:
           #   secret: #CUSTOM SESSION SECRET
           allowGuestAccess: false
         backend:
-          baseUrl: https://tap-gui.tap.robertocolella.com # No port needed with Ingress
+          baseUrl: http://tap-gui.tap.robertocolella.com # No port needed with Ingress
           cors:
-            origin: https://tap-gui.tap.robertocolella.com # No port needed with Ingress
+            origin: http://tap-gui.tap.robertocolella.com # No port needed with Ingress
         organization:
           name: 'Customer Platform Team'    
         customize:
