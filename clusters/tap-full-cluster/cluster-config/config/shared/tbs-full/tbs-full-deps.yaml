@@ -1,15 +1,15 @@
-apiVersion: packaging.carvel.dev/v1alpha1
-kind: PackageRepository
-metadata:
-  name: tbs-full-deps-repository
-  namespace: tap-install
-  annotations:
-    kapp.k14s.io/change-group: pkgr
-spec:
-  fetch:
-    imgpkgBundle:
-      image: colellar.azurecr.io/build-service/full-deps-package-repo:1.7.1
----
+# apiVersion: packaging.carvel.dev/v1alpha1
+# kind: PackageRepository
+# metadata:
+#   name: tbs-full-deps-repository
+#   namespace: tap-install
+#   annotations:
+#     kapp.k14s.io/change-group: pkgr
+# spec:
+#   fetch:
+#     imgpkgBundle:
+#       image: colellar.azurecr.io/build-service/full-deps-package-repo:1.7.1
+# ---
 # apiVersion: packaging.carvel.dev/v1alpha1
 # kind: PackageInstall
 # metadata:
