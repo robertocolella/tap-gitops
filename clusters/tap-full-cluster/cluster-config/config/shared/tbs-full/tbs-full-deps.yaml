@@ -25,6 +25,8 @@ spec:
     refName: full-tbs-deps.tanzu.vmware.com
     versionSelection:
       constraints: ">=0.0.0"
+      prereleases:
+        identifiers: [build,rc]
   values:
   - secretRef:
       name: tap-values
