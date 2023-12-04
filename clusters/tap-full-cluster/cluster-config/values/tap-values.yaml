@@ -69,9 +69,9 @@ tap_install:
           #   secret: #CUSTOM SESSION SECRET
           allowGuestAccess: false
         backend:
-          baseUrl: http://tap-gui.robertocolella.com # No port needed with Ingress
+          baseUrl: http://tap-gui.tap.robertocolella.com # No port needed with Ingress
           cors:
-            origin: http://tap-gui.robertocolella.com # No port needed with Ingress
+            origin: http://tap-gui.tap.robertocolella.com # No port needed with Ingress
         organization:
           name: 'Customer Platform Team'    
         customize:
