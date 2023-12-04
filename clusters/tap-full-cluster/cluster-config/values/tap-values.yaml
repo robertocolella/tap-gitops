@@ -62,17 +62,9 @@ tap_install:
       metadataStoreAutoconfiguration: true
       ingressEnabled: "true"
       app_config:
-
-        integrations:
-          github:
-            - host: github.com
-        auth:
-          # environment: development
-          # allowGuestAccess: true
-          # loginPage:
-          #   github:
-          #     title: Github Login
-          #     message: Enter with your GitHub account
+        # integrations:
+        #   github:
+        #     - host: github.com
         app: 
           baseUrl: https://tap-gui.tap.robertocolella.com
         backend:
