@@ -67,8 +67,20 @@ tap_install:
         integrations:
           github:
             - host: github.com
+        # auth:
+        #   environment: development
         auth:
-          environment: development
+        allowGuestAccess: true
+        loginPage:
+          github:
+            title: Github Login
+            message: Enter with your GitHub account
+        environment: development
+        providers:
+          github:
+            development:
+              clientId: 319965ae0b3598a393e1
+              clientSecret: e9a351919bc30bcdcab3edfdb330bf76b1b11997 
           # session:
           #   secret: #CUSTOM SESSION SECRET
           allowGuestAccess: true
