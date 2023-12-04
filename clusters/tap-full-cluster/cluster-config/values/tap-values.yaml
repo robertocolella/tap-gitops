@@ -7,7 +7,7 @@ tap_install:
       image_registry:
         project_path: colellar.azurecr.io/tap
     
-    kubernetes_version: 1.27
+    kubernetes_version: "1.27"
 
     ceip_policy_disclosed: true
     profile: full
