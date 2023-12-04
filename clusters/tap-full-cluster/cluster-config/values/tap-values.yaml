@@ -55,7 +55,7 @@ tap_install:
     buildservice:
       kp_default_repository: colellar.azurecr.io/tap/build-service
       kp_default_repository_username: colellar
-      exclude_dependencies: true
+      # exclude_dependencies: true
  
     tap_gui:
       service_type: ClusterIP
