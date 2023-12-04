@@ -24,4 +24,4 @@ spec:
   packageRef:
     refName: full-tbs-deps.tanzu.vmware.com
     versionSelection:
-      constraints: colellar.azurecr.io/build-service/full-deps-package-repo:1.7.1
+      constraints: ">=0.0.0"
