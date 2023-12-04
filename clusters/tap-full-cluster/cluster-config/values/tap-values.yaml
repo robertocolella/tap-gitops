@@ -67,18 +67,14 @@ tap_install:
         integrations:
           github:
             - host: github.com
-        # auth:
-        #   environment: development
         auth:
-        allowGuestAccess: true
-        loginPage:
-          github:
-            title: Github Login
-            message: Enter with your GitHub account
-          # session:
-          #   secret: #CUSTOM SESSION SECRET
+          environment: development
           allowGuestAccess: true
-        # backend:
+          loginPage:
+            github:
+              title: Github Login
+              message: Enter with your GitHub account
+          # backend:
         #   baseUrl: https://tap-gui.tap.robertocolella.com # No port needed with Ingress
         #   cors:
         #     origin: https://tap-gui.tap.robertocolella.com # No port needed with Ingress
