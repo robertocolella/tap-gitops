@@ -2,6 +2,10 @@ tap_install:
     sensitive_values:
         tap_gui:
             app_config:
+                integrations:
+                    github:
+                        - host: ENC[AES256_GCM,data:MdQsUxcTvcXBDg==,iv:YjIpxO/gxUs4V3JFWpgTjgErnidvYpbRZj/aXdo7Nkw=,tag:/MfkcU+N2JjCHWEam5YZaw==,type:str]
+                          token: ENC[AES256_GCM,data:LTzGujHQiTwvBZepSuJ7S9D9g63x/teiVz6ieG1KQsMSE4cidVaDRcBwrWlxnsRcOpfZqPBqL84uQCB8FW41QIoo6YV2w5ZwByh319mP4P/hps9Rof/GCss+w9Pd,iv:MIpADy5wkDGLZU91kMtPOkDpt/UfumdUA29/UC6jlyg=,tag:E0MCmzx2iZdE7ilt4AbE9Q==,type:str]
                 auth:
                     environment: ENC[AES256_GCM,data:1eeQ5ypTyQqDBr4=,iv:FYJQHTY7wXQsFD6VN+S7iRb2wrSyEDwUDKHMbIYLKKA=,tag:TNYXWN7n4lYOx2HwQR2NYQ==,type:str]
                     allowGuestAccess: ENC[AES256_GCM,data:dq8HxkY=,iv:fm9WV82wj5rRqsTyiWNHeZ27omAVNJaARJim1koeOp0=,tag:78S27ru0wLJ8yaRQQCJSJw==,type:bool]
@@ -25,8 +29,8 @@ sops:
             RGl5ZVgzSU8zRXo2UWZzMS81NXViR1kKv8sa1zayPgczJ3vaDuOlLlQsO6pUYzBY
             sxsq2vaWvwrz+fYu+5gQV6sMeFwLDBFylX0TwcUJh9N0/EF9Kt8CGQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-04T17:18:43Z"
-    mac: ENC[AES256_GCM,data:8e7Oz5qhpmxAwQoNgFF0Hl5d3BMfIu3Znrdf1La29iCYgcg99Zv3/88xStOeFj5k+1LSCNkrOlmvjt73SLYBZGa+anpo8DO9SELoWAeOPP2yMX5dlIsRfoTRNw5ELERG4RHvJmRc0B8xFietRRmg7sR1gczb2r7jSrmcowCKwhY=,iv:nczfuE2Vcy+PmCghCQBwXC/F7PFfOawVifAONLw0PNI=,tag:gjHZvkZfKHvWeMKfCFvkCA==,type:str]
+    lastmodified: "2023-12-04T17:32:21Z"
+    mac: ENC[AES256_GCM,data:dYQBxUy3BYM/Sp6FLTrLu0Pp1EC9XML9TVXhGse7Ek/hWVEvNYy/a35RmXZypbaz+C6sSLWhH5xuxpMr/06fJNKlqwfjWxkyNbfLYRNi6eiBgAo+nDINB2OyEqVWTigFIkc2p6OK+tYbWukqWrdWKoJloidqI9LiZqO5PbqtTRg=,iv:EyTNTevOuU4KXtCDuzMUSpoXLNm/TKBWNtGmnYW++9A=,tag:zkro6pM1tE0L1W5MnMo6tw==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.8.0
