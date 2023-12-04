@@ -71,7 +71,7 @@ tap_install:
           environment: development
           # session:
           #   secret: #CUSTOM SESSION SECRET
-          allowGuestAccess: false
+          allowGuestAccess: true
         backend:
           baseUrl: https://tap-gui.tap.robertocolella.com # No port needed with Ingress
           cors:
