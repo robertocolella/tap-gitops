@@ -22,7 +22,7 @@ metadata:
 spec:
   serviceAccountName: tap-installer-sa
   packageRef:
-    refName: full-tbs-deps.tanzu.vmware.com
+    refName: full-deps.buildservice.tanzu.vmware.com
     versionSelection:
       constraints: ">=0.0.0"
       prereleases:
