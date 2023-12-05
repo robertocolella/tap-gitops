@@ -11,3 +11,4 @@ clusters/tap-full-cluster/tanzu-sync/app/sensitive-values/github-values.yaml
 github-values.yaml
 git-credentials.yaml
 git-credentials-2.yaml
+github-values.sops.yaml
