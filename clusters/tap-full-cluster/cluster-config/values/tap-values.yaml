@@ -84,7 +84,11 @@ tap_install:
         catalog:
           locations:
           - type: url
-            target: https://github.com/MoSehsah/bank-demo/blob/main/catalog/catalog-info.yaml
+            target: https://github.com/robertocolella/backstage-catalogs/blob/main/system-tanzu-developer-portal.yml
+          - type: url
+            target: https://github.com/robertocolella/backstage-catalogs/blob/main/system-tanzu-application-platform.yml
+          - type: url
+            target: https://github.com/robertocolella/backstage-catalogs/blob/main/system-polyglot-demo-apps.yml
 
     accelerator:
       managed_resources:
