@@ -16,20 +16,13 @@ tap_install:
                                 clientSecret: ENC[AES256_GCM,data:AqhAv7xaTH4Epnz2k/9wEDxSa/uexHiNER1MLZnedhHJh1OnizZz+A==,iv:eltL8mL5sxwFicH0W4MiBmEU0a7YwuRUTaez8OlZTJQ=,tag:Us1fKSdxmbgM4Y2gkZT86w==,type:str]
                 techdocs:
                     builder: ENC[AES256_GCM,data:/v8aSgqoF3I=,iv:mhXigiougxDaTyYb4XugI6tb34GEzv+goE72+BPlMKg=,tag:kOonllK1fEJWhGRXAN/OIg==,type:str]
-                    generator:
-                        runIn: ENC[AES256_GCM,data:/dTd6HUf,iv:qe4k16tfaWARtqNzKIGW7LPTE0c+qG1UQPO45wkJqy4=,tag:5QDvzyn/G+wi5gIYwTVmig==,type:str]
                     publisher:
-                        type: ENC[AES256_GCM,data:6ngRwEU=,iv:Gvd18nn0aAqL6WMTN1zkKsLtEPFDBNFS+If7YwNXU1E=,tag:E/PPSKHru59QuhACcevLZA==,type:str]
-                        awsS3:
-                            bucketName: ENC[AES256_GCM,data:2iHJNfFsXSsjcHY8KIiwi8w+pvTid7qt/xg=,iv:SQh1i0j8Vp1MC+rNyH8CFVYc70w2eTZ5bVmXSFbRFo8=,tag:VUSVvqCMO9Z88xSTNjuA9w==,type:str]
-                            accountId: ENC[AES256_GCM,data:DPCSGnGvMrd+ajOp,iv:vLORDbnSeP7eLlNWlW8Wc4Uuj860JwlrMia3PjFcKDU=,tag:NSLG2k7Tfs22RzAv2/PV0A==,type:str]
-                            region: ENC[AES256_GCM,data:y1C7IXpL2P4wWg==,iv:cX2GARqBOWMptWEZja/jbtWGrF3vhdm9vSoo6G853Kw=,tag:tVTrIO05JaPBGXxQurqC/w==,type:str]
-                            s3ForcePathStyle: ENC[AES256_GCM,data:+gtCSmk=,iv:Mer01E0fM1T72ooURymSaihQedE6HAzvwRYKIbWCpis=,tag:SOKyz/3MiEmRLpoen6I6ZQ==,type:bool]
-                aws:
-                    accounts:
-                        - accountId: ENC[AES256_GCM,data:Ra7cYzKqOmCKPWKm,iv:aVpLjB0SbstW8hSmA8WvFQ3gBroV/zVjC0ShvtzEKnI=,tag:ot/9vE+KJTHPptxQXqeHrQ==,type:str]
-                          accessKeyId: ENC[AES256_GCM,data:JOaQfZmVn49Kro3SaYHGJtTqjrI=,iv:Te4vHU941zXg6BxeEDTsC0cne6w1e6orvNUcSkTPUvw=,tag:p6x2/p9Byb0Kb6I6GrR6Kg==,type:str]
-                          secretAccessKey: ENC[AES256_GCM,data:fD/2gf6CEhPRUNUKdlEc3vdpyzmDf4xdr1nlAonC2Fo8p8+DEP1i9g==,iv:PbgovOJkDZRbPcjJ4wVHCsldRPvqijKPKN5hPWbILsQ=,tag:Q93XlWnFuBc0df2Xl4KbdA==,type:str]
+                        type: ENC[AES256_GCM,data:FFYb5CQG4qdoZ3WWRgUUKQ==,iv:M+RwxhTzA0/ZV53yJLLRBQW+/PjMSLcGdEGrP9ByFjI=,tag:+UJEQmL9KSna3aGolMN55A==,type:str]
+                        azureBlobStorage:
+                            containerName: ENC[AES256_GCM,data:9JK6rLFjhzElnEg53EcgnRXDXeB0gSAak3vL0yw=,iv:Vw5ei4YhrDDL7rmVE01CmfBz9sqx5XmDEDYQ9s/aZ8A=,tag:oZy4q3klkcMHa9YPHATDwA==,type:str]
+                            credentials:
+                                accountName: ENC[AES256_GCM,data:+SEMMrHsXzrF3/uiJTMOTkSZkg==,iv:vFxxg1qv8w7iDyE6PrEaKUOUEyfycZhaAogebljkmhQ=,tag:bcpZpwJUr3klwKLX25aQAQ==,type:str]
+                                accountKey: ENC[AES256_GCM,data:0kB0eIdNINWs3y5Maq8FUziRFaDfRYQn2TbVKK++FRN7WKvGiADTQDqBAkB5Lvg4N1Mrrc6d76bh9jccnLxmi89PIk/BcUROIJ7t39K4LO36QkS3UCBs9A==,iv:QLoHYoQJzc8ajLjZokMeknEwxZVJNc0uICiE1/CmYkI=,tag:Mv1ActPAZ9f/CoDdy7Mbrw==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -45,8 +38,8 @@ sops:
             RGl5ZVgzSU8zRXo2UWZzMS81NXViR1kKv8sa1zayPgczJ3vaDuOlLlQsO6pUYzBY
             sxsq2vaWvwrz+fYu+5gQV6sMeFwLDBFylX0TwcUJh9N0/EF9Kt8CGQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-05T08:40:50Z"
-    mac: ENC[AES256_GCM,data:0K/OAuh92W2Gs4cJtfavuTW0/mIXcUL/AJdEtCre8GCLGbe3Z/WavClfx1gOeCrAgz3UX2Yd57KsxYaHbJUA6feUfzVElbi480rIR8eOSD5c4cW54kWLB+36nz74exNocWf96wBsuPtUAD7QXQOZqRDyYkYrrDtp+u3PYRfqet0=,iv:VhqLjUWb34kap2rN/oxOPWaf0qJGWPPJ6CxG4FnKqOs=,tag:XFLIctD44f96FC28ynjEIA==,type:str]
+    lastmodified: "2023-12-05T09:45:56Z"
+    mac: ENC[AES256_GCM,data:n66yRN6C8qfIXbE26+6almvZWa+q4YSmaLAoBJDqPy6h0MzjYXmDvmihVKuHz3PBrnfQqhARIKN2LJDUy2KDoYR3MqOKBA60jLN7caHPxQ4WNauXXYc2HZl4luxexteudkJzAUyZS+rt2eDlyfg0+m0WNjlko8uSlltW0bAscAA=,iv:wpcEeJf2aVm6horlrSjjjFlmBArji3D001dF21MuxU8=,tag:vcqgyv7ySyYQoXmOaHt2eA==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.8.0
