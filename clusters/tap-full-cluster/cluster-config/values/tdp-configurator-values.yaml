@@ -1,0 +1,16 @@
+tdp_configurator:
+  # aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 377668981663.dkr.ecr.eu-central-1.amazonaws.com && imgpkg describe -b $(kubectl get -n tap-install $(kubectl get package -n tap-install --field-selector spec.refName=tpb.tanzu.vmware.com -o name) -o jsonpath="{.spec.template.spec.fetch[0].imgpkgBundle.image}") -o yaml --tty=true | grep -A 1 "kbld.carvel.dev/id: harbor-repo.vmware.com/esback/configurator" | grep "image: " | sed 's/\simage: //g'
+  # export CONFIGURATOR_IMAGE=$(imgpkg describe -b $CONFIGURATOR_IMAGE_BUNDLE -o yaml --tty=true | grep -A 1 "kbld.carvel.dev/id: harbor-repo.vmware.com/esback/configurator" | grep "image: " | sed 's/\simage: //g') && echo $CONFIGURATOR_IMAGE
+  image: colellar.azurecr.io/tanzu/tap-packages@sha256:29f978561d7d931c9a118c167eae905ce41990131013339aaff10c291ac6c42b
+  config: |
+    app:
+      plugins:
+        - name: "@vmware-tanzu/tdp-plugin-techinsights"
+          version: "0.0.2"
+        - name: "@robertocolella/plugin-tech-radar-wrapper"
+          version: "0.1.0"
+    backend:
+      plugins:
+        - name: "@vmware-tanzu/tdp-plugin-techinsights-backend"
+          version: "0.0.2"
+  custom_image: colellar.azurecr.io/tanzu/tap-packages/tdp-config-default@sha256:6b04a105537350b03d20d592bd920065514b91f98ea2acae28838b84c3f0bbad
