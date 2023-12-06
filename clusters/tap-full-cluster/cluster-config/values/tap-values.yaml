@@ -147,3 +147,8 @@ tap_install:
         supply_chain_service_account:
           secrets:
           - git-secret
+          
+    package_overlays:
+    - name: tap-gui
+      secrets:
+      - name: tdp-app-image-overlay-secret
