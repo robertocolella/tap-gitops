@@ -86,7 +86,9 @@ tap_install:
             target: https://github.com/robertocolella/backstage-catalogs/blob/main/system-tanzu-application-platform.yml
           - type: url
             target: https://github.com/robertocolella/backstage-catalogs/blob/main/system-polyglot-demo-apps.yml
-
+          - type: url
+            target: https://github.com/robertocolella/application-accelerator-samples/tree/main/tanzu-java-web-app/catalog/catalog-info.yaml
+                    
     accelerator:
       managed_resources:
         git:
