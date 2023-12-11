@@ -1,14 +1,8 @@
-#@ load("@ytt:data", "data")
-#@ def in_list(key, list):
-#@  return hasattr(data.values.tap_values, key) and (data.values.tap_values[key] in list)
-#@ end
-#! This if condition ensures that this Java Tekton pipeline is only created if the supply chain is testing or testing_scanning, and the TAP profile used is full, iterate or build.
-#@ if/end in_list('supply_chain', ['testing', 'testing_scanning']) and in_list('profile', ['full', 'iterate', 'build']):
----
+#! Test pipeline used when ootb-supply-chain-testing or ootb-supply-chain-testing-scanning is enabled.
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: tekton-pipeline-java
+  name: test-pipeline-java
   labels:
     apps.tanzu.vmware.com/pipeline: test
     apps.tanzu.vmware.com/language: java
@@ -16,33 +10,50 @@ metadata:
     kapp.k14s.io/create-strategy: fallback-on-update
 spec:
   params:
-    - name: source-url
-    - name: source-revision
+  - name: source-url
+  - name: source-revision
   tasks:
-    - name: test
+  - name: test
+    params:
+    - name: source-url
+      value: $(params.source-url)
+    - name: source-revision
+      value: $(params.source-revision)
+    taskSpec:
       params:
-        - name: source-url
-          value: $(params.source-url)
-        - name: source-revision
-          value: $(params.source-revision)
-      taskSpec:
-        params:
-          - name: source-url
-          - name: source-revision
-        steps:
-          - name: test
-            image: gradle
-            script: |-
-              cd `mktemp -d`
-              wget -qO- $(params.source-url) | tar xvz -m
-              pwd
-              MVNW=mvnw
-              GRADLE="build.gradle"
-              if [ -f "$MVNW" ]; then
-                  ./mvnw test
-              elif [ -f "$GRADLE" ]; then
-                  gradle test --debug
-              else
-                  echo "WARNING: No tests were run. This workload is not built with one of the currently supported frameworks (maven or gradle). If using another language/framework, update the image and the script sections of the 'pipeline.tekton.dev' resource in your namespace to match your language/framework."
-                  #exit 1
-              fi
+      - name: source-url
+      - name: source-revision
+      steps:
+      - name: test
+        image: gradle
+        script: |-
+          cd `mktemp -d`
+          wget -qO- $(params.source-url) | tar xvz -m
+          SKIP=".skiptests"
+          if [ -f "$SKIP" ]; then
+            echo "Skipping tests"
+            exit 0
+          fi
+          MVN="pom.xml"
+          GRADLE="build.gradle"
+          if [ -f "$MVN" ]; then
+            mvn --batch-mode --no-transfer-progress verify
+          elif [ -f "$GRADLE" ]; then
+            gradle test
+          else
+            echo "This Java workload does not use Maven or Gradle: cannot run tests."
+          fi
+        volumeMounts:
+        - mountPath: /var/run/
+          name: dind-socket
+      sidecars:
+      - image: docker:dind
+        name: docker
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /var/run/
+          name: dind-socket
+      volumes:
+      - name: dind-socket
+        emptyDir: {}
