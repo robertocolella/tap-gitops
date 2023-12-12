@@ -25,23 +25,20 @@ spec:
       - name: source-revision
       steps:
       - name: test
-        image: ghcr.io/alexandreroman/maven-gradle:17
+        image: gradle
         script: |-
           cd `mktemp -d`
           wget -qO- $(params.source-url) | tar xvz -m
-          SKIP=".skiptests"
-          if [ -f "$SKIP" ]; then
-            echo "Skipping tests"
-            exit 0
-          fi
-          MVN="pom.xml"
+          pwd
+          MVNW=mvnw
           GRADLE="build.gradle"
-          if [ -f "$MVN" ]; then
-            mvn --batch-mode --no-transfer-progress verify
+          if [ -f "$MVNW" ]; then
+              ./mvnw test
           elif [ -f "$GRADLE" ]; then
-            gradle test
+              gradle test --debug
           else
-            echo "This Java workload does not use Maven or Gradle: cannot run tests."
+              echo "WARNING: No tests were run. This workload is not built with one of the currently supported frameworks (maven or gradle). If using another language/framework, update the image and the script sections of the 'pipeline.tekton.dev' resource in your namespace to match your language/framework."
+              #exit 1
           fi
         volumeMounts:
         - mountPath: /var/run/
