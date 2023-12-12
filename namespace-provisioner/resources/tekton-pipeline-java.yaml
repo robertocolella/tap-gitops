@@ -31,7 +31,7 @@ spec:
           wget -qO- $(params.source-url) | tar xvz -m
           pwd
           MVNW=mvnw
-          GRADLE="build.gradle"
+          GRADLE="pom.xml"
           if [ -f "$MVNW" ]; then
               ./mvnw test
           elif [ -f "$GRADLE" ]; then
