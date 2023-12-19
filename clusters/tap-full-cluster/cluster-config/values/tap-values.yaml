@@ -77,7 +77,7 @@ tap_install:
           banners:
             text: "Test Environment"
             color: "#002e5f"
-            bg: "#007a33"
+            bg: "#002e5f"
             link: "https://tanzu.vmware.com/application-platform"
         catalog:
           locations:
