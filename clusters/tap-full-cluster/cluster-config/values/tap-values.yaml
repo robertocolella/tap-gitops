@@ -76,7 +76,7 @@ tap_install:
           custom_name: "Tanzu Application Platform"
           banners:
             text: "Test Environment"
-            color: "#ffffff"
+            color: "#002e5f"
             bg: "#007a33"
             link: "https://tanzu.vmware.com/application-platform"
         catalog:
