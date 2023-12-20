@@ -13,3 +13,4 @@ git-credentials.yaml
 git-credentials-2.yaml
 github-values.sops.yaml
 github-values.sops.yaml-bkp
+jaeger.yaml
