@@ -33,7 +33,7 @@ spec:
           MVNW="pom.xml"
           GRADLE="build.gradle"
           if [ -f "$MVNW" ]; then
-              ./mvnw test
+              mvn --batch-mode --no-transfer-progress verify
           elif [ -f "$GRADLE" ]; then
               gradle test --debug
           else
