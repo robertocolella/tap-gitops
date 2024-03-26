@@ -25,7 +25,7 @@ spec:
       - name: source-revision
       steps:
       - name: test
-        image: gradle
+        image: ghcr.io/alexandreroman/maven-gradle:17
         script: |-
           cd `mktemp -d`
           wget -qO- $(params.source-url) | tar xvz -m
