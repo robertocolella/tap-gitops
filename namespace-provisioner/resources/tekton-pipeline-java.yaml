@@ -30,7 +30,7 @@ spec:
           cd `mktemp -d`
           wget -qO- $(params.source-url) | tar xvz -m
           pwd
-          MVNW=mvnw
+          MVNW="pom.xml"
           GRADLE="build.gradle"
           if [ -f "$MVNW" ]; then
               ./mvnw test
